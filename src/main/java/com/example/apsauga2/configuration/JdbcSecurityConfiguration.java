@@ -47,8 +47,8 @@ public class JdbcSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/").permitAll()
                 .antMatchers("/cart").hasAuthority("USER")
-                .antMatchers("/admin").hasAuthority("ADMIN")
-                .antMatchers("/users").authenticated();
+                .antMatchers("/admin").hasAuthority("ADMIN");
+                //.antMatchers("/users").authenticated();
                 //.antMatchers("/**").permitAll();
     }
 }
